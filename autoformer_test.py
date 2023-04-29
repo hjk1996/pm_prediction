@@ -1,3 +1,4 @@
+import os 
 import sys
 import pandas as pd
 import numpy as np
@@ -6,7 +7,7 @@ from glob import glob
 import argparse
 import torch
 
-sys.path += ["/Users/khj/Development/pollution/Autoformer"]
+sys.path += [os.path.abspath("./Autoformer")]
 from Autoformer.data_provider.data_loader import Dataset_Custom
 from Autoformer.exp.exp_main import Exp_Main
 
@@ -133,4 +134,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    path = os.path.abspath("./Autoformer")
+
+    pass
+    # main()
